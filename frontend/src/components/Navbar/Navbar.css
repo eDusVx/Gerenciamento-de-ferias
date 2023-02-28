@@ -21,22 +21,27 @@
 
 /* Navbar CSS */
 .navbar {
-  background-color: #ffffff;
+  background-color: #007B43;
   height: 80px;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: center;
+}
+
+.logo{
+  margin: auto;
+  height: auto;
 }
 
 .menu-bars {
-  margin-left: 2rem;
+  margin-left: 10;
   font-size: 2rem;
   background: none;
   color: #000;
 }
 
 .nav-menu {
-  background-color: #ffffff;
+  background-color: #007B43;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -83,7 +88,7 @@
 }
 
 .navbar-toggle {
-  background-color: #ffffff;
+  background-color: #007B43;
   width: 100%;
   height: 80px;
   display: flex;
