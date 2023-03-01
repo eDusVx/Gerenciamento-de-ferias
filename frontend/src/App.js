@@ -10,13 +10,13 @@ function App() {
     <>
       <Router>
         <Navbar>
-          <Profile />
         <Route>
             <Route path='/' />
         </Route>
         </Navbar>
       </Router>
       <Footer/>
+      <Profile />
     </>
   );
 }
