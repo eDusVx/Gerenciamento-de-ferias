@@ -1,19 +1,17 @@
 import React from "react";
-import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import * as IoIcons from "react-icons/io";
 
 export const SidebarData = [
   {
     title: "Histórico de solicitações",
     path: "/histórico_solicitacoes",
-    icon: <IoIcons.IoIosPaper />,
+    icon: <AiIcons.AiOutlineHistory   size={40}/>,
     cName: "nav-text",
   },
   {
     title: "Solicitações",
     path: "/solicitacoes",
-    icon: <FaIcons.FaCartPlus />,
+    icon: <AiIcons.AiOutlineCalendar size={28}/>,
     cName: "nav-text",
   }
 ];
