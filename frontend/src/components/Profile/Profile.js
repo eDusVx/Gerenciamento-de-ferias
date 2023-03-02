@@ -24,7 +24,7 @@ const Profile = ()  => {
             alt="user"
             className="object-cover cursor-pointer"
           />
-          <h1 className="ml-4 text-sm font-bold bottom-10">{name}</h1>
+          <h1 className="ml-4 text-lg bottom-10">{name}</h1>
         </div>
         {open && (
         <div ref={menuRef} className="bg-green-700 p-4 w-52 shadow-lg absolute -top-300">
