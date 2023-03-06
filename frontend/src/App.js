@@ -1,10 +1,9 @@
 import React from 'react';
 import { Index_colaborador } from './Pages/colaborador/historico_solicitacoes'
 import { Solicitacoes } from './Pages/colaborador/solicitacoes'
-import { Login_gestor } from './Pages/colaborador/login'
-import { Login_colaborador } from './Pages/colaborador/login'
+// import { Login_gestor } from './Pages/colaborador/login'
+// import { Login_colaborador } from './Pages/colaborador/login'
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import './App.css'
 
 function App() {
   return (

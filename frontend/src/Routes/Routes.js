@@ -7,7 +7,7 @@ import solicitacoes from "../Pages/colaborador/solicitacoes";
 const Routes = () => {
    return(
        <BrowserRouter>
-           <Route component = { index_colaborador }  path="/historico_solicitacoes" exact />
+           <Route component = { index_colaborador }  path="/index_colaborador" exact />
            <Route component = { solicitacoes }  path="/solicitacoes" />
        </BrowserRouter>
    )
