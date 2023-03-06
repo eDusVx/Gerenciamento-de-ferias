@@ -15,7 +15,7 @@ const Profile = ()  => {
   });
   return (
     <div className="h-screen flex justify-center py-12">
-      <div className="absolute top-5 right-12 bottom-0">
+      <div className="absolute top-[25px] right-12 bottom-0">
         <div className="flex items-center">
           <img 
             ref={imgRef}
@@ -27,7 +27,7 @@ const Profile = ()  => {
           <h1 className="ml-4 text-lg bottom-10">{name}</h1>
         </div>
         {open && (
-        <div ref={menuRef} className="bg-green-700 p-[10px] w-[234px] mt-[20px] shadow-lg absolute -top-300">
+        <div ref={menuRef} className="bg-green-700 p-[10px] w-[234px] mt-[10px] shadow-lg absolute -top-300">
           <ul>
             {Menus.map((menu) => (
               <li

@@ -7,10 +7,10 @@ import Example from '../../components/Notifications/Notifications'
 export const Index_colaborador = () => {
   return (
   <>
-    {/* <Header/>
+    <Header/>
     <Profile />
-    <Footer/> */}
-    <Example/>
+    <Footer/>
+    {/* <Example/> */}
   </>
   )
 }

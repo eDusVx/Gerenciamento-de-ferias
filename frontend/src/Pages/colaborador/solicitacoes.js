@@ -10,7 +10,7 @@ export const Solicitacoes = () => {
     <Header/>
     <Profile />
     <Footer/>
-    <Example/>
+    {/* <Example/> */}
   </>
   )
 }
