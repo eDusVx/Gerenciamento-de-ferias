@@ -1,11 +1,15 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/Navbar';
+import Footer from '../../components/Footer/Footer';
+import Profile from '../../components/Profile/Profile';
 
-function solicitacoes() {
+export const Solicitacoes = () => {
   return (
-    <div>
-        <h1>solicitacoes</h1>
-    </div>
+  <>
+    <Navbar/>
+    <Profile />
+    <Footer/>
+  </>
   )
 }
 
-export default solicitacoes

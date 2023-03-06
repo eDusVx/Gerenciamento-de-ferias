@@ -1,23 +1,21 @@
 import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import Profile from './components/Profile/Profile'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Index_colaborador } from './Pages/colaborador/historico_solicitacoes'
+import { Solicitacoes } from './Pages/colaborador/solicitacoes'
+import { Login_gestor } from './Pages/colaborador/login'
+import { Login_colaborador } from './Pages/colaborador/login'
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import './App.css'
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navbar>
-        <Route>
-            <Route path='/' />
-        </Route>
-        </Navbar>
-      </Router>
-      <Footer/>
-      <Profile />
-    </>
+    <BrowserRouter>
+    <Routes>
+      {/* <Route exact path='/login_colaborador' element={<Login_colaborador />} />
+      <Route exact path='/login_gestor' element={<Login_gestor />} /> */}
+      <Route exact path='/index_colaborador' element={<Index_colaborador />} />
+      <Route exact path='/solicitacoes' element={<Solicitacoes />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
