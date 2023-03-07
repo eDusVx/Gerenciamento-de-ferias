@@ -20,7 +20,7 @@ const Profile = ()  => {
           <img 
             ref={imgRef}
             onClick={()=>setOpen(!open)}
-            src="./images/perfil.png" width={50} height={30}
+            src="./images/perfil.png" width={45} height={30}
             alt="user"
             className="object-cover cursor-pointer"
           />

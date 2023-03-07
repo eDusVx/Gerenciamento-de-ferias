@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
+import Footer from '../../components/Footer/Footer';
 // import "./style.css"
 
 export const Login = () => {
@@ -22,25 +23,24 @@ export const Login = () => {
     }
 
     return (
-        <div className="container-principal flex top-[30%] left-[20%] w-[100%]">
-
+        <div className="container-principal">
+            <div className="Logo items-center flex flex-row flex-wrap justify-center mt-[15%]">
+                <img src="./images/queroquero.png" width={380}/>
+                {/* <div className="ml-[30px]" >Gerenciamento de férias</div> */}
+            </div>
+            <div className="container-login w-[300px] p-[30px] m-auto flex flex-row flex-wrap rounded-md justify-center">
+                <input className="text-center mb-[20px] p-[8px] h-[30px] rounded shadow bg-slate-300" type="text" placeholder="Matrícula" value={login} onChange={(evt) => setLogin(evt.target.value)} />
+                <input className="text-center mb-[20px] p-[8px] h-[30px] rounded shadow bg-slate-300" type="password" placeholder="*********" value={senha} onChange={(evt) => setSenha(evt.target.value)} />
+                <button className="rounded w-[100px] h-[30px] m-auto text-center bg-slate-500" to="/home" id="entrar" onClick={redirecionar}>Entrar</button>
+            </div>
             {msg === true ?
-                (<div className="alert alert-warning w-25 mx-auto" role="alert">
-                    Login ou Senha inválidos!
+                (<div className="alert alert-warning w-[60px] mx-auto" role="alert">
+                    <h1>Dados de login inválidos</h1>
                 </div>)
                 :
                 null
             }
-
-            <div className="Logo m-auto">
-                <img src="./images/queroquero.png" width={250} height={82}/>
-                <h1>Gerenciamento de férias</h1>
-            </div>
-            <div className="container-login w-[25%] p-[30px] m-auto flex flex-col rounded-md">
-                <input className="text-center mb-[20px] p-[8px] rounded shadow bg-slate-300" type="text" placeholder="Login" value={login} onChange={(evt) => setLogin(evt.target.value)} />
-                <input className="text-center mb-[20px] p-[8px] rounded shadow bg-slate-300" type="password" placeholder="*********" value={senha} onChange={(evt) => setSenha(evt.target.value)} />
-                <button className="rounded text-center bg-slate-600" to="/home" id="entrar" onClick={redirecionar}>Entrar</button>
-            </div>
-        </div >
+            <Footer/>
+        </div > 
     )
 }
