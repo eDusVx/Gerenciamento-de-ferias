@@ -1,20 +1,25 @@
 import React from 'react';
-import { Index_colaborador } from './Pages/colaborador/historico_solicitacoes'
-import { Solicitacoes } from './Pages/colaborador/solicitacoes'
-// import { Login_gestor } from './Pages/colaborador/login'
-// import { Login_colaborador } from './Pages/colaborador/login'
+import { Provider } from 'react-redux';
+import { Index_colaborador } from './Pages/colaborador/historico_solicitacoes';
+import { Solicitacoes } from './Pages/colaborador/solicitacoes';
+import { Login } from './Pages/colaborador/login';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { store, persistor } from './Store/index';
+import { PersistGate } from 'redux-persist/integration/react';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      {/* <Route exact path='/login_colaborador' element={<Login_colaborador />} />
-      <Route exact path='/login_gestor' element={<Login_gestor />} /> */}
-      <Route exact path='/index_colaborador' element={<Index_colaborador />} />
-      <Route exact path='/solicitacoes' element={<Solicitacoes />} />
-    </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <Routes>
+            <Route exact path='/' element={<Login />} />
+            <Route exact path='/index_colaborador' element={<Index_colaborador />} />
+            <Route exact path='/solicitacoes' element={<Solicitacoes />} />
+          </Routes>
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   );
 }
 
