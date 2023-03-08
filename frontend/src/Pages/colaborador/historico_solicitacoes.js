@@ -8,7 +8,6 @@ export const Index_colaborador = () => {
   return (
   <>
     <Header/>
-    <Profile />
     {/* <Example/> */}
   </>
   )

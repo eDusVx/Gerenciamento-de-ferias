@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useRef } from 'react';
+import { Link } from "react-router-dom"
 
 const Profile = ()  => {
   const [open,setOpen] = useState(false);
@@ -29,15 +30,14 @@ const Profile = ()  => {
         {open && (
         <div ref={menuRef} className="bg-green-700 p-[10px] w-[234px] mt-[10px] shadow-lg absolute -top-300">
           <ul>
-            {Menus.map((menu) => (
-              <li
-                onClick={()=>setOpen(false)}
-                className="p-[10px] text-lg cursor-pointer rounded hover:bg-black hover:text-white hover:rounded"
-                key={menu}
-              >
-                {menu}
+              <li onClick={()=>setOpen(false)} className="p-[10px] text-lg cursor-pointer rounded hover:bg-black hover:text-white hover:rounded" key={Menus}>
+                <div>{'Perfil'}</div>
               </li>
-            ))}
+              <Link to="/">
+              <li onClick={()=>setOpen(false)} className="p-[10px] text-lg cursor-pointer rounded hover:bg-black hover:text-white hover:rounded" key={Menus}>
+                {'Sair'}
+              </li>
+              </Link>
           </ul>     
         </div>
         )}

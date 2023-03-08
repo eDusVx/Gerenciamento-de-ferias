@@ -3,8 +3,9 @@ import React, { useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 import Profile from '../Profile/Profile'
 import Sidebar from '../Sidebar/Sidebar'
+import Sidebar_gestor from '../Sidebar/Sidebar_gestor'
 
-const Header = () => {
+const Header_gestor = () => {
   const [sidebar, setSidebar] = useState(false)
 
   const showSiderbar = () => setSidebar(!sidebar)
@@ -13,10 +14,10 @@ const Header = () => {
     <div className="h-[85px] flex bg-green-700 shadow-md">
         <FaBars className="w-[30px] h-[30px] mt-[30px] ml-[32px] cursor-pointer" onClick={showSiderbar} />
         <img src="./images/queroquero2.png" width={200} height={82} className="m-auto"/>
-        {sidebar && <Sidebar active={setSidebar} />}
+        {sidebar && <Sidebar_gestor active={setSidebar} />}
       <Profile/>
     </div>
   )
 }
 
-export default Header
+export default Header_gestor

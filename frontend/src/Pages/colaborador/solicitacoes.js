@@ -8,7 +8,6 @@ export const Solicitacoes = () => {
   return (
   <>
     <Header/>
-    <Profile />
     {/* <Example/> */}
   </>
   )
