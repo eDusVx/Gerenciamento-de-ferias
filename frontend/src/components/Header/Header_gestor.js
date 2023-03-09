@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 // import { Container } from './styles'
 import { FaBars } from 'react-icons/fa'
 import Profile from '../Profile/Profile'
-import Sidebar from '../Sidebar/Sidebar'
 import Sidebar_gestor from '../Sidebar/Sidebar_gestor'
 
 const Header_gestor = () => {
