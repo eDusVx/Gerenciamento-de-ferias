@@ -33,6 +33,11 @@ const Header_gestor = () => {
       <div className="hidden md:block">
         <Profile />
       </div>
+      <div className="hidden md:block bg-gray-300 absolute top-[85px] w-header right-[0px] h-[85px] z-[-1]">
+        <div className="absolute top-[18px] left-0 h-[50px] w-2 bg-green-800"></div>
+        <p className="text-xl font-medium text-black mt-[30px] ml-[20px]">Página atual</p>
+        <div className="absolute top-[18px] right-0 h-[50px] w-2 bg-green-800"></div>
+      </div>
     </div>
   );
 };
