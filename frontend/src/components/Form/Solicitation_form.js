@@ -5,10 +5,16 @@ const Solicitation_form = () => {
     const [adiantamentoSalario, setAdiantamentoSalario] = useState(false);
     const [outraOpcaoHabilitada, setOutraOpcaoHabilitada] = useState(false);
 
-  function handleCheckboxChange(event) {
-    setAdiantamentoSalario(event.target.checked);
-    setOutraOpcaoHabilitada(event.target.checked);
-  }
+    function handleCheckboxChange(event) {
+        if (event.target.value === "sim") {
+          setAdiantamentoSalario(true);
+          setOutraOpcaoHabilitada(true);
+        } else {
+          setAdiantamentoSalario(false);
+          setOutraOpcaoHabilitada(false);
+        }
+      }
+      
 
   return (
     <div className="wrapper">
@@ -22,8 +28,13 @@ const Solicitation_form = () => {
           <input type="date" className="input" />
         </div>
         <div className="inputfield">
-          <label>Já adiantou o 13 salário este ano?</label>
-          <input type="checkbox" className="checkbox" checked={adiantamentoSalario} onChange={handleCheckboxChange} />
+            <label>Já adiantou o 13 salário este ano?</label>
+            <div>
+                <label>
+                <input type="radio" name="adiantamento" value="sim" checked={adiantamentoSalario === true} onChange={handleCheckboxChange} />Sim</label>
+                <label>
+                <input type="radio" name="adiantamento" value="nao" checked={adiantamentoSalario === false} onChange={handleCheckboxChange} />Não</label>
+            </div>
         </div>
         <div className="inputfield">
           <label>Solicitar adiantamento de 13 salário</label>

@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { FaTimes } from 'react-icons/fa'
+import { FaTimes,FaUserEdit } from 'react-icons/fa'
 import { AiOutlineCalendar,AiOutlineLogout } from 'react-icons/ai'
 import { CgProfile } from 'react-icons/cg'
+import { MdDashboard,MdPeopleAlt } from 'react-icons/md'
 
 
 
@@ -26,9 +27,12 @@ const Sidebar_gestor = ({ active }) => {
     <div className="bg-green-700 fixed h-[100%] top-0 left-0 w-[250px] " sidebar={active}>
       <FaTimes className="block md:hidden fixed w-[30px] h-[30px] mt-[32px] ml-[32px] cursor-pointer" onClick={closeSidebar} />  
       <div className="mt-[85px]">
-        <SidebarItem Icon={AiOutlineCalendar} Text="Cadastro de funcionários" to="/index_gestor"/>
+        <SidebarItem Icon={MdDashboard} Text="Dashboard" to="/index_gestor"/>
+        <SidebarItem Icon={FaUserEdit} Text="Cadastro de colaboradores" to="/cadastro_colaborador"/>
+        <SidebarItem Icon={MdPeopleAlt} Text="Colaboradores" to="/colaboradores"/>
+        <SidebarItem Icon={AiOutlineCalendar} Text="Solicitações" to="/aprovacoes"/>
         <div className="md:hidden">
-          <SidebarItem Icon={CgProfile} Text={'Perfil'} to="/perfil"/>
+          <SidebarItem Icon={CgProfile} Text={'Perfil'} to="/perfil_gestor"/>
           <SidebarItem Icon={AiOutlineLogout} Text={'Sair'} to="/"/>
         </div> 
       </div>

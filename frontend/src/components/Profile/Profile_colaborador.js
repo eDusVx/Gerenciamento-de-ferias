@@ -30,9 +30,11 @@ const Profile = ()  => {
         {open && (
         <div ref={menuRef} className="bg-green-700 p-[10px] w-[234px] mt-[10px] shadow-lg absolute -top-300">
           <ul>
+              <Link to="/perfil_colaborador">
               <li onClick={()=>setOpen(false)} className="p-[10px] text-lg cursor-pointer rounded hover:bg-black hover:text-white hover:rounded" key={Menus}>
                 <div>{'Perfil'}</div>
               </li>
+              </Link>
               <Link to="/">
               <li onClick={()=>setOpen(false)} className="p-[10px] text-lg cursor-pointer rounded hover:bg-black hover:text-white hover:rounded" key={Menus}>
                 {'Sair'}

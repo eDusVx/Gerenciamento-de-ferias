@@ -18,7 +18,6 @@ const SidebarItem = ({ Icon, Text, to }) => {
 
 
 const Sidebar = ({ active }) => {
-
   const closeSidebar = () => {
     active(false)
   }
@@ -30,7 +29,7 @@ const Sidebar = ({ active }) => {
         <SidebarItem Icon={AiOutlineHistory} Text="Histórico de solicitações" to="/index_colaborador"/>
         <SidebarItem Icon={AiOutlineCalendar} Text="Solicitações" to="/solicitacoes"/>
         <div className="md:hidden">
-          <SidebarItem Icon={CgProfile} Text={'Perfil'} to="/perfil"/>
+          <SidebarItem Icon={CgProfile} Text={'Perfil'} to="/perfil_colaborador"/>
           <SidebarItem Icon={AiOutlineLogout} Text={'Sair'} to="/"/>
         </div>   
       </div>

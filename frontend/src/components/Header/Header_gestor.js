@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import { FaBars } from 'react-icons/fa'
-import Profile from '../Profile/Profile'
+import Profile from '../Profile/Profile_gestor'
+import { useLocation } from 'react-router-dom'
 import Sidebar_gestor from '../Sidebar/Sidebar_gestor'
 
 const Header_gestor = () => {
@@ -20,6 +21,22 @@ const Header_gestor = () => {
     return () => mediaQuery.removeListener(handleResize);
   }, []);
 
+  const location = useLocation();
+  let currentText = '';
+
+  if (location.pathname === '/index_gestor') {
+    currentText = 'Dashboard';
+  } else if (location.pathname === '/cadastro_colaborador') {
+    currentText = 'Cadastro de colaboradores';
+  } else if (location.pathname === '/colaboradores') {
+    currentText = 'Colaboradores';
+  } else if (location.pathname === '/aprovacoes') {
+    currentText = 'Solicitações';
+  } else if (location.pathname === '/perfil_gestor') {
+    currentText = 'Perfil';
+  } else if (location.pathname === '/') {
+    currentText = 'Sair';
+  }
   return (
     <div className="h-[85px] flex bg-green-700 shadow-md">
       {showSidebarButton && (
@@ -35,7 +52,7 @@ const Header_gestor = () => {
       </div>
       <div className="hidden md:block bg-gray-300 absolute top-[85px] w-header right-[0px] h-[85px] z-[-1]">
         <div className="absolute top-[18px] left-0 h-[50px] w-2 bg-green-800"></div>
-        <p className="text-xl font-medium text-black mt-[30px] ml-[20px]">Página atual</p>
+        <p className="text-xl font-medium text-black mt-[30px] ml-[20px]">{currentText}</p>
         <div className="absolute top-[18px] right-0 h-[50px] w-2 bg-green-800"></div>
       </div>
     </div>
