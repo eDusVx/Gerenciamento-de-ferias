@@ -46,7 +46,7 @@ const Header = () => {
       <div className="hidden md:block">
         <Profile />
       </div>
-      <div className="segunda_header hidden md:block bg-gray-300 absolute top-[85px] w-header right-[0px] h-[85px] z-[-1]">
+      <div className="segunda_header hidden md:block bg-slate-100 absolute top-[85px] w-header right-[0px] h-[85px] z-[-1]">
         <div className="absolute top-[18px] left-0 h-[50px] w-2 bg-green-800"></div>
         <p className="text-xl font-medium text-black mt-[30px] ml-[20px]">{currentText}</p>
         <div className="absolute top-[18px] right-0 h-[50px] w-2 bg-green-800"></div>

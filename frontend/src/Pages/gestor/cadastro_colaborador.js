@@ -7,7 +7,6 @@ export const CadastroColaborador = () => {
   <>
     <HeaderGestor/>
     <RegistrationForm/>
-    {/* <Example/> */}
   </>
   )
 }

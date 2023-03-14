@@ -23,7 +23,7 @@ const Sidebar = ({ active }) => {
   }
 
   return (
-    <div className="bg-green-700 fixed h-[100%] top-0 left-0 w-[250px] " sidebar={active}>
+    <div className="bg-green-700 fixed h-[100%] top-0 left-0 w-[250px] z-[1]" sidebar={active}>
       <FaTimes className="block md:hidden fixed w-[30px] h-[30px] mt-[32px] ml-[32px] cursor-pointer" onClick={closeSidebar} />  
       <div className="mt-[85px]">
         <SidebarItem Icon={AiOutlineHistory} Text="Histórico de solicitações" to="/index_colaborador"/>

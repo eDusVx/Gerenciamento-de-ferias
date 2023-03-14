@@ -16,7 +16,7 @@ const Profile = ()  => {
   });
   return (
     <div className="h-screen flex justify-center py-12">
-      <div className="absolute top-[25px] right-12 bottom-0">
+      <div className="absolute top-[25px] right-[12px] bottom-[0px]">
         <div className="flex items-center">
           <img 
             ref={imgRef}

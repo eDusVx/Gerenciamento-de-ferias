@@ -9,6 +9,9 @@ module.exports = {
       width: {
         'header': 'calc(100% - 250px)',
       },
+      height: {
+        'headerh': 'calc(100% - 170px)',
+      },
     },
   },
   plugins: [],
