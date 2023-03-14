@@ -82,26 +82,6 @@ WSGI_APPLICATION = 'django_react.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': '980162',
-#         'USER': '980162',
-#         'PASSWORD': '980162',
-#         'HOST': 'qqtech4.crqc50gxdjpu.sa-east-1.rds.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': '980162', 
-#         'USER': '980162',
-#         'PASSWORD': 'Quero@2023#',
-#         'HOST': 'qqtech4.crqc50gxdjpu.sa-east-1.rds.amazonaws.com', 
-#         'PORT': '5432',
-#     }
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

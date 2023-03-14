@@ -1,21 +1,21 @@
 import './style.css'
 
-const Registration_form = () => {
+const RegistrationForm = () => {
     return (
    <>
-      <div class="wrapper">
-         <div class="form">
-               <div class="inputfield">
+      <div className="wrapper">
+         <div className="form">
+               <div className="inputfield">
                   <label>Nome completo</label>
-                  <input type="text" class="input" placeholder="nome" required></input>
+                  <input type="text" className="input" placeholder="nome" required></input>
                </div>   
-               <div class="inputfield">
+               <div className="inputfield">
                   <label>Matrícula</label>
-                  <input type="text" class="input" placeholder="matrícula" required></input>
+                  <input type="text" className="input" placeholder="matrícula" required></input>
                </div>  
-               <div class="inputfield">
+               <div className="inputfield">
                   <label>Contrato</label>
-               <div class="custom_select">
+               <div className="custom_select">
                   <select>
                      <option value="">Select</option>
                      <option value="CLT">CLT</option>
@@ -23,24 +23,24 @@ const Registration_form = () => {
                   </select>
                </div>
                </div> 
-               <div class="inputfield">
+               <div className="inputfield">
                   <label>E-mail</label>
-                  <input type="text" class="input" placeholder="email" required></input>
+                  <input type="text" className="input" placeholder="email" required></input>
                </div> 
-               <div class="inputfield">
+               <div className="inputfield">
                   <label>Senha temporária</label>
-                  <input type="password" class="input" placeholder="********" required></input>
+                  <input type="password" className="input" placeholder="********" required></input>
                </div> 
-               <div class="inputfield">
+               <div className="inputfield">
                   <label>Data de admissão</label>
-                  <input type="date" class="input"></input>
+                  <input type="date" className="input"></input>
                </div> 
-               <div class="inputfield">
+               <div className="inputfield">
                   <label>Função</label>
-                  <input type="text" class="input" placeholder="função" required></input>
+                  <input type="text" className="input" placeholder="função" required></input>
                </div> 
-               <div class="inputfield">
-               <input type="submit" value="Registrar" class="btn"></input>
+               <div className="inputfield">
+               <input type="submit" value="Registrar" className="btn"></input>
                </div>
          </div>
       </div>	
@@ -48,5 +48,5 @@ const Registration_form = () => {
     )
 }
 
-export default Registration_form;
+export default RegistrationForm;
   

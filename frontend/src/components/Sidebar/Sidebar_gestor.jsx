@@ -17,7 +17,7 @@ const SidebarItem = ({ Icon, Text, to }) => {
   )
 }
 
-const Sidebar_gestor = ({ active }) => {
+const SidebarGestor = ({ active }) => {
 
   const closeSidebar = () => {
     active(false)
@@ -40,4 +40,4 @@ const Sidebar_gestor = ({ active }) => {
   )
 }
 
-export default Sidebar_gestor
+export default SidebarGestor

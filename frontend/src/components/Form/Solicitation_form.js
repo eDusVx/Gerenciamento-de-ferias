@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './style.css'
 
-const Solicitation_form = () => {
+const SolicitationForm = () => {
     const [adiantamentoSalario, setAdiantamentoSalario] = useState(false);
     const [outraOpcaoHabilitada, setOutraOpcaoHabilitada] = useState(false);
 
@@ -52,5 +52,5 @@ const Solicitation_form = () => {
   );
 }
 
-export default Solicitation_form;
+export default SolicitationForm;
   

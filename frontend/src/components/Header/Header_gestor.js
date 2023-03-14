@@ -2,9 +2,9 @@ import React, { useState,useEffect } from 'react'
 import { FaBars } from 'react-icons/fa'
 import Profile from '../Profile/Profile_gestor'
 import { useLocation } from 'react-router-dom'
-import Sidebar_gestor from '../Sidebar/Sidebar_gestor'
+import SidebarGestor from '../Sidebar/Sidebar_gestor'
 
-const Header_gestor = () => {
+const HeaderGestor = () => {
   const [sidebar, setSidebar] = useState(false);
   const [showSidebarButton, setShowSidebarButton] = useState(false);
 
@@ -46,7 +46,7 @@ const Header_gestor = () => {
         />
       )}
       <img src="./images/queroquero2.png" width={200} height={82} className="m-auto" />
-      {(sidebar || !showSidebarButton) && <Sidebar_gestor active={hideSidebar} />}
+      {(sidebar || !showSidebarButton) && <SidebarGestor active={hideSidebar} />}
       <div className="hidden md:block">
         <Profile />
       </div>
@@ -59,4 +59,4 @@ const Header_gestor = () => {
   );
 };
 
-export default Header_gestor;
+export default HeaderGestor;

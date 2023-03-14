@@ -1,10 +1,10 @@
 import React from 'react'
-import Header_gestor from '../../components/Header/Header_gestor';
+import HeaderGestor from '../../components/Header/Header_gestor';
 
-export const Perfil_gestor = () => {
+export const PerfilGestor = () => {
   return (
   <>
-    <Header_gestor/>
+    <HeaderGestor/>
   </>
   )
 }

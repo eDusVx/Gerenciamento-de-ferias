@@ -1,13 +1,12 @@
 import React from 'react'
-import Registration_form from '../../components/Form/Registration_form';
-import Example from '../../components/Notifications/Notifications'
-import Header_gestor from '../../components/Header/Header_gestor';
+import RegistrationForm from '../../components/Form/Registration_form';
+import HeaderGestor from '../../components/Header/Header_gestor';
 
-export const Cadastro_colaborador = () => {
+export const CadastroColaborador = () => {
   return (
   <>
-    <Header_gestor/>
-    <Registration_form/>
+    <HeaderGestor/>
+    <RegistrationForm/>
     {/* <Example/> */}
   </>
   )
