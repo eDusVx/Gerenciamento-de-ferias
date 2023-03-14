@@ -33,7 +33,6 @@ const Header = () => {
   } else if (location.pathname === '/') {
     currentText = 'Sair';
   }
-  console.log(currentText)
   return (
     <div className="h-[85px] flex bg-green-700 shadow-md">
       {showSidebarButton && (
@@ -42,7 +41,7 @@ const Header = () => {
           onClick={showSidebar}
         />
       )}
-      <img src="./images/queroquero2.png" width={200} height={82} className="m-auto" />
+      <img src="./images/queroquero2.png" alt="QQlogo" width={200} height={82} className="m-auto" />
       {(sidebar || !showSidebarButton) && <Sidebar active={hideSidebar} />}
       <div className="hidden md:block">
         <Profile />

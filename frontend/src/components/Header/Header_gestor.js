@@ -45,7 +45,7 @@ const HeaderGestor = () => {
           onClick={showSidebar}
         />
       )}
-      <img src="./images/queroquero2.png" width={200} height={82} className="m-auto" />
+      <img src="./images/queroquero2.png" alt="QQlogo" width={200} height={82} className="m-auto" />
       {(sidebar || !showSidebarButton) && <SidebarGestor active={hideSidebar} />}
       <div className="hidden md:block">
         <Profile />
