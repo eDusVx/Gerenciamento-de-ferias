@@ -15,7 +15,7 @@ const SolicitationForm = () => {
   }
 
   return (
-    <div className="wrapper">
+    <div className="wrapper bg-gray-300">
       <div className="form">
         <div className="inputfield">
           <label>Data de início</label>

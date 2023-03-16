@@ -3,7 +3,7 @@ import './style.css'
 const RegistrationForm = () => {
     return (
    <>
-      <div className="wrapper">
+      <div className="wrapper bg-gray-300">
          <div className="form">
                <div className="inputfield">
                   <label>Nome completo</label>

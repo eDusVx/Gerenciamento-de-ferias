@@ -1,0 +1,106 @@
+/* * {
+    box-sizing: border-box;
+  }
+  
+.table {
+    width: calc(100% - 250px);
+    height: calc(100% - 170px);
+    border-collapse: collapse;
+    margin-bottom: 40px;
+}
+
+.table td {
+    padding: 7px 10px;
+    border: 1px solid;
+}
+
+.word-break {
+    word-break: break-all;
+}
+
+.scroll-container {
+    overflow: auto;
+    margin-bottom: 40px;
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+.scroll {
+    margin: 0;
+}
+
+.scroll td:first-of-type {
+    position: sticky;
+    left: 0;
+    border-left: none;
+    background: #f4f4f4;
+    color: #212121;
+    font-weight: bold;
+}
+
+.scroll td:last-of-type {
+    border-right: none;
+}
+  
+@media screen and (max-width: 600px) {  
+    .table{
+        width: 100%;
+    }
+
+    .responsive thead {
+        visibility: hidden;
+        height: 0;
+        position: absolute;
+    }
+
+    .responsive tr {
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    .responsive td {
+        border: 1px solid;
+        border-bottom: none;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    .responsive td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .responsive td:last-child {
+    border-bottom: 1px solid;
+    }
+}
+   */
+.search-box {
+  @apply bg-cover bg-no-repeat w-full text-lg py-3 pl-10 border border-gray-300 mb-5;
+  background-image: url('/css/searchicon.png');
+}
+
+.customer-table {
+  @apply w-full text-lg border border-gray-300;
+}
+
+.customer-table th,
+.customer-table td {
+  @apply text-left py-4 px-6;
+}
+
+.customer-table tr {
+  @apply border-b border-gray-300;
+}
+
+.customer-table tr.header,
+.customer-table tr:hover {
+  @apply bg-gray-100;
+}
+
+.hide {
+  @apply hidden;
+}

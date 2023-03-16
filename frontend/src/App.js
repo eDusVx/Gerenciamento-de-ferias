@@ -4,7 +4,7 @@ import { IndexColaborador } from './Pages/colaborador/historico_solicitacoes';
 import { CadastroColaborador } from './Pages/gestor/cadastro_colaborador';
 import { IndexGestor } from './Pages/gestor/index_gestor'
 import { Solicitacoes } from './Pages/colaborador/solicitacoes';
-import { Colabroadores } from './Pages/gestor/colaboradores';
+import { Colaboradores } from './Pages/gestor/colaboradores'
 import { Aprovacoes } from './Pages/gestor/aprovacoes';
 import { Login } from './Pages/Login/login';
 import { PerfilColaborador } from './Pages/Perfil/Perfil_colaborador'
@@ -16,7 +16,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route exact path='/' element={<Login />} />
-            <Route exact path='/colaboradores' element={<Colabroadores />} />
+            <Route exact path='/colaboradores' element={<Colaboradores />} />
             <Route exact path='/aprovacoes' element={<Aprovacoes />} />
             <Route exact path='/index_gestor' element={<IndexGestor />} />
             <Route exact path='/cadastro_colaborador' element={<CadastroColaborador />} />
