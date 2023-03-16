@@ -28,7 +28,7 @@ const Profile = ()  => {
           <h1 className="ml-4 text-lg bottom-10">{name}</h1>
         </div>
         {open && (
-        <div ref={menuRef} className="bg-green-700 p-[10px] w-[234px] mt-[10px] shadow-lg absolute -top-300">
+        <div ref={menuRef} className="bg-green-700 p-[10px] w-[234px] mt-[10px] shadow-lg absolute -top-300 z-[2]">
           <ul>
               <Link to="/perfil_gestor">
               <li onClick={()=>setOpen(false)} className="p-[10px] text-lg cursor-pointer rounded hover:bg-black hover:text-white hover:rounded" key={Menus}>
