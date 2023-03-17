@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState } from 'react';
+import axios from 'axios';
+import { useState,useEffect } from 'react';
 import { BiSearch } from 'react-icons/bi';
 import { AiOutlineDownload,AiFillEdit } from 'react-icons/ai'
 import { TiDelete } from 'react-icons/ti'
@@ -18,38 +19,32 @@ export const Colaboradores = () => {
     "delete": "Delete",
     "historico": "Histórico"
   }
-  
-  const content = [
-    {
-      "matricula": "112018495",
-      "name": "Jaquel",
-      "email": "lj@gmail.com",
-      "major": "Comp. Science",
-      "status": "Ativo"
-    },
-    {
-      "matricula": "111694728",
-      "name": "Joe",
-      "email": "joe@gmail.com",
-      "major": "Business",
-      "status": "Férias"
-    },
-    {
-      "matricula": "114729405",
-      "name": "Clara",
-      "email": "clara@gmail.com",
-      "major": "Criminal Justice",
-      "status": "Ativo"
-    }
-  ]
-
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage] = useState(5);
+  const [funcionarios, setFuncionarios] = useState([]);
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
   }
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await axios.get("http://localhost:8000/funcionario/");
+      setFuncionarios(response.data);
+    }
+    fetchData();
+  }, []);
+
+  const content = funcionarios.map((funcionario) => {
+    return {
+      matricula: funcionario.matricula,
+      name: funcionario.nome,
+      email: funcionario.email_constitucional,
+      major: funcionario.cargo,
+      status: "Ativo"
+    };
+  });
 
   const filteredContent = content.filter((item) => {
     return (

@@ -1,15 +1,17 @@
 from django.db import models
 
+
+
 class Funcionario(models.Model):
-    matricula = models.CharField(max_length=6, null=False)
+    matricula = models.CharField(primary_key=True,max_length=6, null=False)
     nome = models.CharField(max_length=100)
     contrato = models.CharField(max_length=3, choices=[('CLT', 'CLT'), ('PJ', 'PJ')])
     data_admissao = models.DateField()
     email_constitucional = models.CharField(max_length=100)
     gmail = models.CharField(max_length=100)
-    senha = models.CharField(max_length=20)
-    cargo = models.CharField(max_length=20)
-    matricula_gestor = models.ForeignKey('self', on_delete=models.SET_NULL, null=True)
+    senha = models.CharField(max_length=40)
+    cargo = models.CharField(max_length=40)
+    matricula_gestor = models.ForeignKey('ferias.Funcionario',to_field='matricula', on_delete=models.SET_NULL, null=True, related_name='subordinados')
 
 class Notificacao(models.Model):
     id = models.BigIntegerField(primary_key=True, null=False)
@@ -26,4 +28,5 @@ class Solicitacao(models.Model):
     data_criacao = models.DateField()
     antecipacao_salario = models.BooleanField()
     notificacoes = models.ForeignKey(Notificacao, on_delete=models.CASCADE)
+
 

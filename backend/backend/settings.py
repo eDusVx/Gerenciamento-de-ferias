@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -75,25 +76,25 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': '980162',
-#         'USER': '980162',
-#         'PASSWORD': '980162',
-#         'HOST': 'qqtech4.crqc50gxdjpu.sa-east-1.rds.amazonaws.com',
-#         'PORT': '',
-#         'OPTIONS': {
-#             'options': '-c search_path=public'
-#         },
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '980162',
+        'USER': '980162',
+        'PASSWORD': '980162',
+        'HOST': 'qqtech4.crqc50gxdjpu.sa-east-1.rds.amazonaws.com',
+        'PORT': '',
+        'OPTIONS': {
+            'options': '-c search_path=public'
+        },
+    }
+}
 
 
 # Password validation
@@ -136,3 +137,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+ALLOWED_HOSTS = ['*']
