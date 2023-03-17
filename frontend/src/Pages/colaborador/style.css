@@ -9,14 +9,17 @@
   box-shadow: 1px 1px 1px rgba(0,0,0,0.125);
   padding: 30px;
 }
-
-.cell-active {
-  background-color: green;
-}
-
-.cell-holiday {
-  background-color: yellow;
-}
+/* .wrapper{
+  position: absolute;
+  width: calc(100% - 250px);
+  height: calc(100% - 170px);
+  margin: auto;
+  margin-left: 250px;
+  margin-top: 215px;
+  margin-right: 0px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.125);
+  padding: 30px;
+} */
 
 .search-container {
   display: flex;
@@ -157,18 +160,8 @@ table th {
   cursor: not-allowed;
 }
 
-.active-status {
-  background-color: #4CAF50;
-}
-
-.vacation-status {
-  background-color: #f44336;
-}
-
-.edit,
-.delete,
-.historico {
-  background-color: #4CAF50; /* cor de fundo */
+.detalhes {
+  background-color: #959795; /* cor de fundo */
   border: none;
   color: white; /* cor do texto */
   padding: 8px 12px;
@@ -179,14 +172,5 @@ table th {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 4px;
-  width: 45px; /* largura */
-}
-
-.historico{
-  width: 45px; /* largura */
-  background-color: #959795;
-}
-
-.delete {
-  background-color: #f44336; /* cor de fundo */
+  width: 110px; /* largura */
 }

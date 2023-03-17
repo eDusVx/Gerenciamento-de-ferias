@@ -29,7 +29,7 @@ const SolicitationForm = () => {
           <label>Já adiantou o 13 salário este ano?</label>
           <div>
             <label>
-              <input type="radio" name="adiantamento" value="sim" checked={adiantamentoSalario} onChange={handleCheckboxChange} />
+              <input className="w-[20px] " type="radio" name="adiantamento" value="sim" checked={adiantamentoSalario} onChange={handleCheckboxChange} />
               Sim
             </label>
             <label>
@@ -47,7 +47,7 @@ const SolicitationForm = () => {
           <textarea placeholder="Insira seu comentário" className="textarea" />
         </div>
         <div className="inputfield">
-          <input type="submit" value="Registrar" className="btn" />
+          <input type="submit" value="Solicitar" className="btn" />
         </div>
       </div>
     </div>

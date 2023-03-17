@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import { BiSearch } from 'react-icons/bi';
+import { AiOutlineDownload,AiFillEdit } from 'react-icons/ai'
+import { TiDelete } from 'react-icons/ti'
 import HeaderGestor from '../../components/Header/Header_gestor';
 import './style.css'
 
@@ -13,7 +15,8 @@ export const Colaboradores = () => {
     "major": "Cargo",
     "status": "Status",
     "edit": "edit",
-    "delete": "Delete"
+    "delete": "Delete",
+    "historico": "Histórico"
   }
   
   const content = [
@@ -102,10 +105,12 @@ export const Colaboradores = () => {
                   }
                 >
                   {key === "edit" ? (
-                    <button className="edit">Editar</button>
+                    <button className="edit"><AiFillEdit size={20}/></button>
                   ) : key === "delete" ? (
-                    <button className="delete">Deletar</button>
-                  ) : (
+                    <button className="delete"><TiDelete size={20}/></button>
+                  ) : key === "historico" ? (
+                    <button className="historico"><AiOutlineDownload size={20}/></button>
+                  ): (
                     item[key]
                   )}
                 </td>
